@@ -1,0 +1,18 @@
+import turtle as trtl
+
+painter = trtl.Turtle()
+trtl.right(90)
+trtl.backward(100)
+
+trtl.penup()
+trtl.goto(100,100)
+
+trtl.pendown()
+trtl.forward(100)
+
+trtl.penup()
+trtl.goto(0, -100)
+trtl.circle(50)
+
+wn = trtl.Screen()
+wn.mainloop()
