@@ -1,18 +1,62 @@
+# import turtle module
 import turtle as trtl
 
+# create turtle object
 painter = trtl.Turtle()
-trtl.right(90)
-trtl.backward(100)
 
+# setting up
 trtl.penup()
-trtl.goto(100,100)
-
+trtl.pencolor("yellow")
+trtl.fillcolor("yellow")
+trtl.goto(0,-125)
 trtl.pendown()
-trtl.forward(100)
 
+# making a head
+trtl.begin_fill()
+trtl.circle(125)
+trtl.end_fill()
+
+# finding eye color
+color = input("What is your eye color?")
+
+# making the eyes
 trtl.penup()
-trtl.goto(0, -100)
-trtl.circle(50)
+trtl.goto(-40, 20)
+trtl.pencolor(color)
+trtl.fillcolor(color)
+trtl.begin_fill()
+trtl.circle(25, 360, 4)
+trtl.penup()
+trtl.goto(40,20)
+trtl.pendown()
+trtl.circle(25, 360, 4)
+trtl.end_fill()
 
+# adjustment
+trtl.right(90)
+
+
+# making the mouth
+circle = input("Do you have a wide or narrow mouth?")
+if circle == "wide":
+  trtl.penup()
+  trtl.pencolor("black")
+  trtl.fillcolor("black")
+  trtl.goto(-100,-10)
+  trtl.pendown()
+  trtl.begin_fill()
+  trtl.circle(100, 180)
+  trtl.end_fill()
+if circle == "narrow":
+  trtl.penup()
+  trtl.pencolor("black")
+  trtl.fillcolor("black")
+  trtl.goto(-50,-20)
+  trtl.pendown()
+  trtl.begin_fill()
+  trtl.circle(50, 180)
+  trtl.end_fill()
+
+# make screen persist
 wn = trtl.Screen()
 wn.mainloop()
